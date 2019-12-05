@@ -1,0 +1,235 @@
+
+/*style for food blog landing page Culinary Crimes*/
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+.introduction {
+
+
+}
+
+.intro-text h1 {
+  font-size: 30;
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 50px 0px 0px 0px;
+}
+
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 22px;
+  color: grey;
+}
+
+
+.hero-container{
+  height: 80vh;
+  display: flex;
+  flex: 1;
+  padding: 50px 0px 0px 0px;
+
+}
+.hero{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+nav{
+
+  display: flex;
+  position:fixed;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15vh;
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left:0px;
+
+}
+
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-family: 'Barlow Semi Condensed', Helvetica, sans-serif;
+}
+.navlinks {
+display: flex;
+background-color: black;
+color: white;
+text-transform: uppercase;
+justify-content: space-around;
+width: 40%;
+
+}
+.navlinks li{
+  list-style: none;
+}
+.navlinks a{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 11px;
+
+}
+.burger{
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+width: 25px;
+height: 2px;
+background-color:white;
+margin: 5px;
+transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width:1024px){
+  .navlinks{
+    width: 50%;
+  }
+}
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+
+  }
+  .navlinks{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 15vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+  }
+  .navlinks li{
+    opacity: 0;
+  }
+  .burger{
+    display:block;
+/*or display-none; */
+
+}
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+
+
+@keyframes navLinkFade{
+  from{
+  opacity: 0;
+  transform: translateX(50px);
+}
+to{
+  opacity: 1;
+  transform: translateX(0px);
+}
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media screen and (min-width: 35.625rem) {
+.featured-container {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+
+
+h3 {
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 10px;
+  font-family: Helvetica, sans-serif;
+  text-decoration-color: black;
+
+}
+
+/* content begins */
+
+
+
+
+.featured-container {
+
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; /* to center the container */
+  object-fit:contain;
+  box-sizing: content-box;
+  justify-content: center;
+  display: flex
+  flex: 33.33%;
+  position:relative;
+  align-items: center;
+  grid-template-columns: (1fr 1fr 1fr);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-size: 10px;
+  font-family: Helvetica, sans-serif;
+  line-height: 2em;
+  margin: 20px;
+  width: 70%;
+  padding: 1rem;
+
+}
+
+img {
+width: 95%;
+height: auto;
+display: inline-block;
+}
+
+
+
+
+footer{
+
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  text-decoration-color: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .25em;
+  line-height: 2em;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+}
